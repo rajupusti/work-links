@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Link Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-900 min-h-screen flex flex-col items-center justify-center text-white">
+
+    <!-- Main Form Container -->
+    <div class="flex flex-col items-center space-y-6">
+
+      <!-- Row of inputs -->
+      <div class="flex items-center space-x-4 bg-blue-700 shadow-lg p-4 rounded-lg">
+        
+        <!-- Date Input -->
+        <label for="date" class="text-gray-50 text-xl font-medium">Date:</label>
+        <input 
+          type="date" 
+          id="date"
+          class="border border-gray-300 rounded-lg px-3 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+
+        <!-- Select Dropdown -->
+        <select id="select"
+          class="border border-gray-300 rounded-lg px-3 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+        >
+          <option value="open">Opening</option>
+          <option value="close">Closing</option>
+        </select>
+
+        <!-- Submit Button -->
+        <button id="submitBtn"
+          class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-800 transition"
+        >
+          Submit
+        </button>
+      </div>
+
+      <!-- Google Form Link -->
+      <div>
+        <a 
+          href="https://docs.google.com/forms/d/e/1FAIpQLSct3cdw9E7DeGowvKrT6kP2f-h4h_zJPx9j8hcZipvKwhKx5w/viewform?usp=pp_url&entry.173694581=59599&entry.1788179170=RKH%20Front%20Gate%20Closing%20(Branch_Ballavpur_Godown)&entry.1595199125=MIS131_RAJU%20PUSTI"
+          target="_blank"
+          class="text-blue-400 hover:text-blue-300 underline"
+        >
+          Open Google Form
+        </a>
+      </div>
+
+    </div>
+
+    <!-- 🧠 Auto-set today's date -->
+    <script>
+      const dateInput = document.getElementById("date");
+      const today = new Date().toISOString().split("T")[0];
+      dateInput.value = today;
+    </script>
+  <script src="script.js"></script>
+  </body>
+</html>
